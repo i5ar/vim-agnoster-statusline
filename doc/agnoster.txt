@@ -1,0 +1,67 @@
+*agnoster.txt* A pleasing statusline inspired by Agnoster Zsh theme.
+*agnoster*
+
+ _    ___                __
+| |  / (_)___ ___  _____/ /____  _____
+| | / / / __ `__ \/ ___/ __/ _ \/ ___/
+| |/ / / / / / / (__  ) /_/  __/ /
+|___/_/_/ /_/ /_/____/\__/\___/_/
+
+A pleasing statusline
+and even more...
+
+==============================================================================
+CONTENTS                                                   *agnoster-contents*
+
+    1.Intro........................................|agnoster-intro|
+        1.1.Quick start............................|agnoster-quickstart|
+        1.2.Recommended settings...................|agnoster-recommended|
+    8.About........................................|syntastic-about|
+    9.License......................................|syntastic-license|
+
+==============================================================================
+1. Intro                                                      *agnoster-intro*
+
+Vim Agnoster (aka Vimster) is a pleasing statusline inspired by Agnoster Zsh
+theme.
+
+------------------------------------------------------------------------------
+1.1. Quick start                                         *agnoster-quickstart*
+
+After installing this plugin, please restart the editor.
+If the statusline doesn't show up, add the following configuration to your
+~/.vimrc: >
+    set laststatus=2
+<
+If the statusline is not colored modify TERM in your shell *rc* file: >
+    export TERM=xterm-256color
+<
+You also need to add the following configuration to your ~/.vimrc: >
+    if !has('gui_running')
+      set t_Co=256
+    endif
+<
+
+------------------------------------------------------------------------------
+1.2. Recommended settings                               *agnoster-recommended*
+
+The showmode hints are unnecessary because the mode information is displayed
+in the statusline.
+If you want to get rid of them, add the following configuration to your
+~/.vimrc: >
+    set noshowmode
+<
+
+==============================================================================
+8. About                                                      *agnoster-about*
+
+This statusline was inspired by my Agnoster Zsh theme.
+
+Find the latest version of Vimster at:
+
+    http://github.com/i5ar/vim-agnoster-statusline
+
+==============================================================================
+9. License                                                  *agnoster-license*
+
+Agnoster is released under the MIT.
