@@ -1,7 +1,8 @@
 " Filename: plugin/agnoster.vim
 " Author: https://github.com/i5ar
+" Version: 0.0.2
 " License: MIT License
-" Last Change: 2017/10/05.
+" Last Change: 2017/12/01.
 
 
 " Statusline inspired by Agnoster Zsh theme
@@ -97,8 +98,8 @@ function! SetStatuslineHighlight()
   highlight BarBlackWhite guibg=Black ctermfg=12 guifg=White ctermbg=0
   highlight BarWhiteBlackPowerline guibg=Black ctermfg=12 guifg=White ctermbg=0
   highlight BarWhiteBlack guibg=White ctermfg=0 guifg=Black ctermbg=12
-  " highlight BarMagentaPowerline guibg=White ctermfg=5 guifg=Magenta ctermbg=12
-  " highlight BarMagenta guibg=Magenta ctermfg=0 guifg=Black ctermbg=5
+  highlight BarMagentaPowerline guibg=White ctermfg=5 guifg=Magenta ctermbg=12
+  highlight BarMagenta guibg=Magenta ctermfg=0 guifg=Black ctermbg=5
   " highlight VimModePowerline guibg=Magenta ctermfg=2 guifg=Green ctermbg=5
   highlight VimModePowerline guibg=White ctermfg=2 guifg=Green ctermbg=12
   highlight VimMode guibg=Yellow ctermfg=12 guifg=White ctermbg=3
@@ -176,6 +177,7 @@ function! UpdateStatusline()
   set statusline+=\ %.32f\  " relative path
   set statusline+=%=  " align right
 
+  " Datatime
   set statusline+=%#BarBlackWhite#
   set statusline+=%{g:powerline_right_alt_sep}
   set statusline+=\ %{&filetype}\  " programming language
@@ -189,14 +191,19 @@ function! UpdateStatusline()
   set statusline+=\ %p%%\  " mouse position in percentage
   set statusline+=%{g:powerline_right_alt_sep}
   set statusline+=\ %l:%c\  " line:column
+
+  " Terminal
   " set statusline+=%#BarMagentaPowerline#
   " set statusline+=%{g:powerline_right_sep}
   " set statusline+=%#BarMagenta#
   " set statusline+=\ %{GetTerminal()}\  " terminal
-  set statusline+=%#VimModePowerline#
-  set statusline+=%{g:powerline_right_sep}
-  set statusline+=%#VimMode#
-  set statusline+=\ %{Mode()}\  " mode
+
+  " Mode
+  " set statusline+=%#VimModePowerline#
+  " set statusline+=%{g:powerline_right_sep}
+  " set statusline+=%#VimMode#
+  " set statusline+=\ %{Mode()}\  " mode
+
 endfunction
 
 call UpdateStatusline()
